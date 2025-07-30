@@ -1,2 +1,40 @@
-# Auto detect text files and perform LF normalization
+# Treat all files with auto line ending normalization
 * text=auto
+
+# Programming and script files - enable diff support
+*.py  text diff=python
+*.sql text diff=sql
+*.ipynb text diff=jupyternotebook
+
+# Markdown and documentation
+*.md  text eol=lf charset=utf-8
+
+# CSV and text data
+*.csv text
+*.tsv text
+
+# Excel and Power BI - binary files
+*.xlsx binary
+*.xls  binary
+*.pbix binary
+
+# PDF, PPTX or any images (if used in presentation or dashboard)
+*.pdf binary
+*.pptx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+
+# JSON or configuration files
+*.json text
+*.yml  text
+*.yaml text
+
+# Ignore diff for large binary files
+*.zip binary
+*.rar binary
+
+# Optional Git Large File Storage (if used)
+# Uncomment below lines if you enable Git LFS in future
+# *.pbix filter=lfs diff=lfs merge=lfs -text
+# *.xlsx filter=lfs diff=lfs merge=lfs -text
